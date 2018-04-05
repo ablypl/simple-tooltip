@@ -1,9 +1,18 @@
-const classes = 'bg-black text-xs px-2 leading-normal py-1 rounded absolute text-grey-light max-w-xs'
+const classes = 'bg-black text-xs px-2 leading-normal py-1 rounded absolute text-grey-light max-w-xs';
+const spacing = 5;
 
 class Tooltip {
-
+    /**
+     *
+     * @param content
+     * @param el
+     * @param position
+     *
+     * @returns Tooltip
+     */
     constructor(content, el, position = 'top') {
         this.displayed = false
+        this.isVisible = false
 
         return this.create()
             .setElement(el)
@@ -21,12 +30,14 @@ class Tooltip {
 
     show() {
         this.tooltip.classList.remove('hidden')
+        this.isVisible = true
 
         return this
     }
 
     hide() {
         this.tooltip.classList.add('hidden')
+        this.isVisible = false
 
         return this
     }
@@ -47,21 +58,27 @@ class Tooltip {
         let rect = this.element.getBoundingClientRect()
 
         let p = {
-            top: rect.y - this.tooltip.offsetHeight + 'px',
+            top: rect.y - this.tooltip.offsetHeight - spacing + 'px',
             left: rect.x - (this.tooltip.offsetWidth - rect.width) / 2 + 'px'
         }
 
         if(position == 'bottom') {
             p = {
-                top: rect.y + this.tooltip.offsetHeight + 'px',
+                top: rect.y + this.tooltip.offsetHeight + spacing + 'px',
                 left: rect.x - (this.tooltip.offsetWidth - rect.width) / 2 + 'px'
+            }
+        }
+        if(position == 'left') {
+            p = {
+                top: rect.y + (rect.height - this.tooltip.offsetHeight)/2 + 'px',
+                left: rect.x - this.tooltip.offsetWidth - spacing + 'px'
             }
         }
 
         if(position == 'right') {
             p = {
-                top: rect.y + this.tooltip.offsetHeight + 'px',
-                left: rect.x - (this.tooltip.offsetWidth - rect.width) / 2 + 'px'
+                top: rect.y + (rect.height - this.tooltip.offsetHeight)/2 + 'px',
+                left: rect.x + rect.width + spacing + 'px'
             }
         }
 
@@ -72,7 +89,6 @@ class Tooltip {
 
     render() {
         this.displayed = true
-        
         document.body.appendChild(this.tooltip)
 
         return this

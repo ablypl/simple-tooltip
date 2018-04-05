@@ -1,0 +1,23 @@
+{
+  "name": "lari-simple-tooltip",
+  "version": "1.0.0",
+  "description": "Simple Vuejs tooltip plugin. At the moment it needs tailwindcss",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ablypl/simple-tooltip.git"
+  },
+  "keywords": [
+    "vuejs",
+    "tooltip"
+  ],
+  "author": "Sebastian Szczepanski <sebastian@ably.pl> (http://ably.pl)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ablypl/simple-tooltip/issues"
+  },
+  "homepage": "https://github.com/ablypl/simple-tooltip#readme"
+}
