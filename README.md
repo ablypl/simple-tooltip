@@ -13,8 +13,7 @@ It applies this class list: 'bg-black text-xs px-2 leading-normal py-1 rounded a
 npm install lari-simple-tooltip --save
 ```
 
-![Demo]
-(https://raw.githubusercontent.com/ablypl/simple-tooltip/master/screenshot.png)
+![Demo](screenshot.png?raw=true)
 
 
 
