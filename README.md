@@ -20,28 +20,28 @@ Simple usage:
 
 Display tooltip on top
 
-```
-<button  v-tooltip="'Tooltip content'">Submit</button>
+```html
+<button v-tooltip="'Tooltip content'">Submit</button>
 ```
 
 
 
 Define tooltip position
-```
-<button  v-tooltipi:right="'Tooltip content'">Submit</button>
+```html
+<button v-tooltipi:right="'Tooltip content'">Submit</button>
 ```
 Available options: left, right, top, bottom
 
 
 
 Display tooltip by default (no mouseover/out events)
-```
-<button  v-tooltip.prevent="'Tooltip content'">Submit</button>
+```html
+<button v-tooltip.prevent="'Tooltip content'">Submit</button>
 ```
 
 
 
 Display tooltip on click
-```
-<button  v-tooltip.click="'Tooltip content'">Submit</button>
+```html
+<button v-tooltip.click="'Tooltip content'">Submit</button>
 ```
