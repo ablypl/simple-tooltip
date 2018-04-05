@@ -64,10 +64,11 @@ class Tooltip {
 
         if(position == 'bottom') {
             p = {
-                top: rect.y + this.tooltip.offsetHeight + spacing + 'px',
+                top: rect.y + rect.height + spacing + 'px',
                 left: rect.x - (this.tooltip.offsetWidth - rect.width) / 2 + 'px'
             }
         }
+
         if(position == 'left') {
             p = {
                 top: rect.y + (rect.height - this.tooltip.offsetHeight)/2 + 'px',
@@ -77,7 +78,7 @@ class Tooltip {
 
         if(position == 'right') {
             p = {
-                top: rect.y + (rect.height - this.tooltip.offsetHeight)/2 + 'px',
+                top: rect.y + this.tooltip.offsetHeight - spacing + 'px',
                 left: rect.x + rect.width + spacing + 'px'
             }
         }
@@ -89,6 +90,7 @@ class Tooltip {
 
     render() {
         this.displayed = true
+
         document.body.appendChild(this.tooltip)
 
         return this
