@@ -19,6 +19,16 @@ npm install lari-simple-tooltip --save
 
 # Usage
 
+
+```
+import SimpleTooltip from 'lari-simple-tooltip'
+
+
+Vue.use(SimpleTooltip)
+
+```
+
+
 Simple usage:
 
 Display tooltip on top
