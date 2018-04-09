@@ -57,28 +57,30 @@ class Tooltip {
     setPosition(position) {
         let rect = this.element.getBoundingClientRect()
 
+        let baseTop = -(document.body.getBoundingClientRect().top)
+
         let p = {
-            top: rect.y - this.tooltip.offsetHeight - spacing + 'px',
+            top: baseTop + rect.y - this.tooltip.offsetHeight - spacing + 'px',
             left: rect.x - (this.tooltip.offsetWidth - rect.width) / 2 + 'px'
         }
 
         if(position == 'bottom') {
             p = {
-                top: rect.y + rect.height + spacing + 'px',
+                top: baseTop + rect.y + rect.height + spacing + 'px',
                 left: rect.x - (this.tooltip.offsetWidth - rect.width) / 2 + 'px'
             }
         }
 
         if(position == 'left') {
             p = {
-                top: rect.y + (rect.height - this.tooltip.offsetHeight)/2 + 'px',
+                top: baseTop + rect.y + (rect.height - this.tooltip.offsetHeight)/2 + 'px',
                 left: rect.x - this.tooltip.offsetWidth - spacing + 'px'
             }
         }
 
         if(position == 'right') {
             p = {
-                top: rect.y + this.tooltip.offsetHeight - spacing + 'px',
+                top: baseTop + rect.y + this.tooltip.offsetHeight - spacing + 'px',
                 left: rect.x + rect.width + spacing + 'px'
             }
         }
@@ -89,9 +91,8 @@ class Tooltip {
     }
 
     render() {
-        this.displayed = true
-
         document.body.appendChild(this.tooltip)
+        this.displayed = true
 
         return this
     }
