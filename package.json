@@ -1,6 +1,6 @@
 {
   "name": "lari-simple-tooltip",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple Vuejs tooltip plugin. At the moment it needs tailwindcss",
   "main": "index.js",
   "scripts": {
