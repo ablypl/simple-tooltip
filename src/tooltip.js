@@ -80,7 +80,7 @@ class Tooltip {
 
         if(position == 'right') {
             p = {
-                top: baseTop + rect.y + this.tooltip.offsetHeight - spacing + 'px',
+                top: baseTop + rect.y + (rect.height - this.tooltip.offsetHeight)/2 + 'px',
                 left: rect.x + rect.width + spacing + 'px'
             }
         }
