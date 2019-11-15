@@ -1,4 +1,4 @@
-const classes = 'bg-black text-xs px-2 leading-normal py-1 rounded absolute text-grey-light max-w-xs';
+const classes = 'bg-black text-xs px-2 leading-normal py-1 rounded absolute text-gray-400 max-w-xs';
 const spacing = 5;
 
 class Tooltip {
